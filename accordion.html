@@ -1,0 +1,60 @@
+<html>
+<head>
+<style>
+	.accordion
+	{
+		color:black;
+		cursor:pointer;
+		padding:18px;
+		width:100%;
+		text-align:center;
+		background-color:yellow;
+	}
+	.panel
+	{
+		padding:0px 18px;
+		display:none;
+		overflow:hidden;
+		
+	}
+	.active,.accordion:hover
+	{
+		background-color:green;
+	}
+</style>
+</head>
+<body>
+	<button class="accordion">Paragraph1</button>
+	<div class="panel">
+	   <p>Yoga is a group of physical, mental, and spiritual practices or disciplines which originated in ancient India. Yoga is one of the six orthodox schools of Hindu philosophical traditions.There is a broad variety of yoga schools, practices, and goals in Hinduism, Buddhism, and Jainism.</p>
+	</div>
+	<button class="accordion">Paragraph2</button>
+	<div class="panel">
+	   <p>The origins of yoga have been speculated to date back to pre-Vedic Indian traditions; it is mentioned in the Rigveda, but most likely developed around the sixth and fifth centuries BCE, in ancient India's ascetic and srama?a movements. </p>
+	</div>
+	<button class="accordion">Paragraph3</button>
+	<div class="panel">
+	   <p>The Yoga Sutras of Patanjali date from the first half of the 1st millennium CE, but only gained prominence in the West in the 20th century. Hatha yoga texts emerged around the 11th century with origins in tantra.</p>
+	</div>
+   <script type="text/javascript">
+	var acc=document.getElementsByClassName("accordion");
+	var i;
+	for(i=0;i<acc.length;i++)
+	{
+		acc[i].addEventListener("click",function()
+		{
+			this.classList.toggle("active");
+			var panel=this.nextElementSibling;
+			if(panel.style.display=="block")
+			{
+				panel.style.display="none";
+			}
+			else
+			{
+				panel.style.display="block";
+			}
+		});
+        }
+</script>
+</body>
+</html>
